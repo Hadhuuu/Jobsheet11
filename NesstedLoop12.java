@@ -13,11 +13,17 @@ public class NesstedLoop12 {
             }
         System.out.println();
         }
-        for (double[] cityTemps : temps) {
-            for (double temp : cityTemps) {
+        for (int i = 0; i < temps.length; i++) {
+            System.out.println("City: " + i);
+            double total = 0;
+
+            for (double temp : temps[i]) {
                 System.out.print(temp + " ");
+                total += temp;
             }
-            System.out.println();
+
+            double rerata = total / temps[i].length;
+            System.out.println("\nAverage Temperature of this city is : " + rerata);
         }
     }
 }
